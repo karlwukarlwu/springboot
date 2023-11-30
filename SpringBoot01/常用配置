@@ -1,0 +1,92 @@
+#端口号
+server.port=10000
+
+#应用的上下文路径(项目路径)
+server.servlet.context-path=/allModel
+
+#指定POJO 扫描包来让mybatis 自动扫描到自定义的POJO
+mybatis.type-aliases-package=com.cxs.allmodel.model
+#指定mapper.xml 的路径
+#(application 上配置了@MapperScan(扫面mapper 类的路径)和pom.xml 中放行了mapper.xml 后，
+# 配置mapper-locations 没有意义。如果mapper 类和mapper.xml 不在同一个路径下时，
+mapper-locations 就有用了)
+mybatis.mapper-locations=classpath:com/cxs/allmodel/mapper
+#session 失效时间(单位s)
+spring.session.timeout=18000
+#数据库连接配置
+#mysql 数据库url
+mysql.one.jdbc-url=jdbc:mysql://127.0.0.1:3306/test?serverTimezone=Asia/Shanghai&useSSL=false
+#mysql 数据库用户名
+mysql.one.username=
+#数据库密码
+mysql.one.password=
+#线程池允许的最大连接数
+mysql.one.maximum-pool-size=15
+#日志打印:日志级别trace<debug<info<warn<error<fatal 默认级别为info，即默认打印info 及其以
+上级别的日志
+#logging.level 设置日志级别，后面跟生效的区域，比如root 表示整个项目，也可以设置为某个包下，
+也可以具体到某个类名（日志级别的值不区分大小写）
+logging.level.com.cxs.allmodel.=debug
+logging.level.com.cxs.allmodel.mapper=debug
+logging.level.org.springframework.web=info
+logging.level.org.springframework.transaction=info
+logging.level.org.apache.ibatis=info
+logging.level.org.mybatis=info
+logging.level.com.github.pagehelper = info
+logging.level.root=info
+#日志输出路径
+logging.file=/tmp/api/allmodel.log
+#配置pagehelper 分页插件
+韩顺平Java 工程师
+pagehelper.helperDialect=mysql
+pagehelper.reasonable=true
+pagehelper.supportMethodsArguments=true
+pagehelper.params=count=countSql
+#jackson 时间格式化
+spring.jackson.serialization.fail-on-empty-beans=false
+#指定日期格式，比如yyyy-MM-dd HH:mm:ss，或者具体的格式化类的全限定名
+spring.jackson.date-format=yyyy-MM-dd HH:mm:ss
+#指定日期格式化时区，比如America/Los_Angeles 或者GMT+10
+spring.jackson.time-zone=GMT+8
+#设置统一字符集
+spring.http.encoding.charset=utf8
+#redis 连接配置
+# redis 所在主机ip 地址
+spring.redis.host=
+
+#redis 服务器密码
+spring.redis.password=
+#redis 服务器端口号
+spring.redis.port=
+#redis 数据库的索引编号(0 到15)
+spring.redis.database=14
+## 连接池的最大活动连接数量，使用负值无限制
+#spring.redis.pool.max-active=8
+#
+## 连接池的最大空闲连接数量，使用负值表示无限数量的空闲连接
+#spring.redis.pool.max-idle=8
+#
+## 连接池最大阻塞等待时间，使用负值表示没有限制
+#spring.redis.pool.max-wait=-1ms
+#
+## 最小空闲连接数量，使用正值才有效果
+#spring.redis.pool.min-idle=0
+韩顺平Java 工程师
+#
+## 是否启用SSL 连接.
+##spring.redis.ssl=false
+#
+## 连接超时，毫秒为单位
+#spring.redis.timeout= 18000ms
+#
+## 集群模式下，集群最大转发的数量
+#spring.redis.cluster.max-redirects=
+#
+## 集群模式下，逗号分隔的键值对（主机：端口）形式的服务器列表
+#spring.redis.cluster.nodes=
+#
+## 哨兵模式下，Redis 主服务器地址
+#spring.redis.sentinel.master=
+#
+## 哨兵模式下，逗号分隔的键值对（主机：端口）形式的服务器列表
+#spring.redis.sentinel.nodes= 127.0.0.1:5050,127.0.0.1:5060

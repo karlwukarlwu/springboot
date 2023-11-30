@@ -1,0 +1,11 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 50MB
+  datasource: #配置数据源
+    # 说明: 如果你没有指定useSSL=true ,启动项目会报红警告, 环境的问题，小伙伴们灵活处理
+    url: jdbc:mysql://localhost:3306/spring_boot?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver

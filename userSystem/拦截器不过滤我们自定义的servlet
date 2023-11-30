@@ -1,0 +1,2 @@
+拦截器只拦截dispatcherServlet的请求，不拦截自定义的servlet
+
